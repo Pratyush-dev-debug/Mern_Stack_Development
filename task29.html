@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="RegistrationForm.css" />
+</head>
+<body>
+<div class="container">
+  <h2>Registration Form</h2>
+  <form id="regForm" onsubmit="return validateForm()">
+    <div class="form-control">
+      <label>Name:</label>
+      <input type="text" id="name" />
+      <span class="error" id="nameError"></span>
+    </div>
+    <div class="form-control">
+      <label>Email:</label>
+      <input type="text" id="email" />
+      <span class="error" id="emailError"></span>
+    </div>
+    <div class="form-control">
+      <label>Website:</label>
+      <input type="text" id="website" />
+      <span class="error" id="websiteError"></span>
+    </div>
+    <div class="form-control">
+      <label>Message:</label>
+      <textarea id="message"></textarea>
+      <span class="error" id="messageError"></span>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script src="RegistrationForm.js"></script>
+</body>
+</html>

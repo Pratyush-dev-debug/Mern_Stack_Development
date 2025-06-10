@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+
+    .link-box {
+      border: 1px solid #aaa;
+      background-color: #eee;
+      padding: 10px;
+      margin-bottom: 40px;
+    }
+
+    .link-box a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: #0000cc;
+    }
+
+    .email-box {
+      border: 1px solid #aaa;
+      padding: 15px;
+      width: fit-content;
+    }
+
+    .email-box h3 {
+      margin-top: 0;
+    }
+
+    .email-box a {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .email-box a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Section for opening links -->
+<div class="link-box">
+  <p>Click any of the following links</p>
+  <a href="https://www.youtube.com/" target="_blank">Open in New</a>
+  <a href="https://www.youtube.com/" target="_self">Open in Self</a>
+  <a href="https://www.youtube.com/" target="_parent">Open in Parent</a>
+  <a href="https://www.youtube.com/" target="_top">Open in Body</a>
+</div>
+
+<!-- Section for email link -->
+<div class="email-box">
+  <h3>Link to an Email Address</h3>
+  <p>To create a link that opens in the user's email program (to let them send a new email), use <code>mailto:</code> inside the attribute:</p>
+  <a href="https://mail.google.com/mail/u/0/?hl=en#inbox">Send email</a>
+</div>
+
+</body>
+</html>

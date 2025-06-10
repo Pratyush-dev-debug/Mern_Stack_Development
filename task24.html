@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grade Calculator</title>
+  <script>
+    window.onload = function() {
+      let marks = prompt("Enter your marks (0-100):");
+      marks = parseFloat(marks);
+
+      let grade;
+
+      if (!isNaN(marks) && marks >= 0 && marks <= 100) {
+        if (marks >= 90) {
+          grade = "A+";
+        } else if (marks >= 80) {
+          grade = "A";
+        } else if (marks >= 70) {
+          grade = "B";
+        } else if (marks >= 60) {
+          grade = "C";
+        } else if (marks >= 50) {
+          grade = "D";
+        } else {
+          grade = "F";
+        }
+
+        document.body.innerHTML = `<h2>Your Grade: ${grade}</h2>`;
+      } else {
+        document.body.innerHTML = "<h2>Invalid marks entered. Please reload and try again.</h2>";
+      }
+    };
+  </script>
+</head>
+<body>
+</body>
+</html>

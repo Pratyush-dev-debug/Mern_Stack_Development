@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkerboard</title>
+  <style>
+    body {
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(10, 50px);
+      grid-template-rows: repeat(10, 50px);
+      border: 5px solid black;
+    }
+
+    .cell {
+      width: 50px;
+      height: 50px;
+    }
+
+    .pink {
+      background-color: pink;
+    }
+
+    .black {
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+
+<div class="board">
+  <!-- 10 x 10 checkerboard -->
+  <!-- JavaScript auto-generates this below -->
+  <script>
+    const board = document.querySelector('.board');
+    for (let row = 0; row < 10; row++) {
+      for (let col = 0; col < 10; col++) {
+        const cell = document.createElement('div');
+        cell.className = 'cell ' + ((row + col) % 2 === 0 ? 'pink' : 'black');
+        board.appendChild(cell);
+      }
+    }
+  </script>
+</div>
+
+</body>
+</html>

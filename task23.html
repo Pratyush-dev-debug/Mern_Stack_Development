@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Repeat Text</title>
+    <script>
+        window.onload = function() {
+            // Ask the user how many times to repeat
+            let times = prompt("How many times do you want to repeat the text?");
+
+            // Convert input to number
+            times = parseInt(times);
+
+            if (!isNaN(times) && times > 0) {
+                let output = "";
+                for (let i = 1; i <= times; i++) {
+                    output += `${i}.AOT IS THE BEST SERIES<br>`;
+                }
+
+                document.body.innerHTML = output;
+            } else {
+                document.body.innerHTML = "Invalid number entered.";
+            }
+        };
+    </script>
+</head>
+<body>
+</body>
+</html>

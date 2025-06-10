@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Company Directory</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    input[type="text"] {
+      margin-bottom: 20px;
+      padding: 8px;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background-color: white;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 12px;
+    }
+
+    th {
+      background-color: #009879;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #d1f0e1;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Company Contact Directory</h2>
+<input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search for companies, contacts or countries...">
+
+<table id="companyTable">
+  <thead>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr><td>Alfreds Futterkiste</td><td>Maria Anders</td><td>Germany</td></tr>
+  <tr><td>Berglunds snabbköp</td><td>Christina Berglund</td><td>Sweden</td></tr>
+  <tr><td>Centro comercial Moctezuma</td><td>Francisco Chang</td><td>Mexico</td></tr>
+  <tr><td>Ernst Handel</td><td>Roland Mendel</td><td>Austria</td></tr>
+  <tr><td>Island Trading</td><td>Helen Bennett</td><td>UK</td></tr>
+  <tr><td>Königlich Essen</td><td>Philip Cramer</td><td>Germany</td></tr>
+  <tr><td>Laughing Bacchus Winecellars</td><td>Yoshi Tannamuri</td><td>Canada</td></tr>
+  <tr><td>Magazzini Alimentari Riuniti</td><td>Giovanni Rovelli</td><td>Italy</td></tr>
+  <tr><td>Northwind Traders</td><td>Anne Wilson</td><td>USA</td></tr>
+  <tr><td>Wartian Herkku</td><td>Pirkko Koskitalo</td><td>Finland</td></tr>
+  <tr><td>Old World Delicatessen</td><td>Rene Phillips</td><td>USA</td></tr>
+  <tr><td>Split Rail Beer & Ale</td><td>Art Braunschweiger</td><td>USA</td></tr>
+  <tr><td>Folies gourmandes</td><td>Martine Rancé</td><td>France</td></tr>
+  <tr><td>Tradição Hipermercados</td><td>Anabela Domingues</td><td>Brazil</td></tr>
+  </tbody>
+</table>
+
+<script>
+  function filterTable() {
+    const input = document.getElementById("searchInput");
+    const filter = input.value.toUpperCase();
+    const table = document.getElementById("companyTable");
+    const tr = table.getElementsByTagName("tr");
+
+    for (let i = 1; i < tr.length; i++) {
+      let visible = false;
+      const td = tr[i].getElementsByTagName("td");
+      for (let j = 0; j < td.length; j++) {
+        if (td[j] && td[j].innerText.toUpperCase().indexOf(filter) > -1) {
+          visible = true;
+        }
+      }
+      tr[i].style.display = visible ? "" : "none";
+    }
+  }
+</script>
+
+</body>
+</html>

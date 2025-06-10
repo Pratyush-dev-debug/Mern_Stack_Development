@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Doctor Appointment Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff;
+    }
+
+    .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .left-section img {
+      max-width: 400px;
+      height: auto;
+    }
+
+    .form-section {
+      margin-left: 40px;
+      max-width: 600px;
+    }
+
+    h2 {
+      color: #000;
+      border-bottom: 2px solid #8b0000;
+      padding-bottom: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    input[type="tel"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+    }
+
+    .name-fields {
+      display: flex;
+      gap: 10px;
+    }
+
+    .address-fields {
+      display: flex;
+      gap: 10px;
+    }
+
+    .gender-options {
+      margin-top: 5px;
+    }
+
+    .appointment-type {
+      margin-top: 10px;
+    }
+
+    .appointment-type label {
+      display: block;
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #007BFF;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Optional: make it responsive */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .form-section {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="left-section">
+    <img src="doc2.jpg" alt="Doctor Image">
+  </div>
+
+  <div class="form-section">
+    <h2>Doctor Appointment Form</h2>
+    <form>
+      <label>Appointment Date:</label>
+      <input type="date" required>
+
+      <label>Appointment Time:</label>
+      <input type="time" required>
+
+      <label>Name:</label>
+      <div class="name-fields">
+        <input type="text" placeholder="First" required>
+        <input type="text" placeholder="Last" required>
+      </div>
+
+      <label>Gender:</label>
+      <div class="gender-options">
+        <input type="radio" name="gender" value="male" required> Male
+        <input type="radio" name="gender" value="female" required> Female
+      </div>
+
+      <label>Phone:</label>
+      <input type="tel" placeholder="#####" required>
+
+      <label>Address:</label>
+      <div class="address-fields">
+        <input type="text" placeholder="City" required>
+        <input type="text" placeholder="State" required>
+      </div>
+
+      <label>Your Query:</label>
+      <textarea rows="4" placeholder="Type your message..."></textarea>
+
+      <div class="appointment-type">
+        <label>Appointment Type:</label>
+        <label><input type="checkbox"> Cervix checkup</label>
+        <label><input type="checkbox"> Heart checkup</label>
+        <label><input type="checkbox"> Eye check-up</label>
+        <label><input type="checkbox"> Hearing Test</label>
+      </div>
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

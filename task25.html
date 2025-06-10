@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Sign Checker</title>
+  <script>
+    window.onload = function() {
+      let input = prompt("Enter a number:");
+      let number = parseFloat(input);
+
+      if (input !== null && input.trim() !== "" && !isNaN(number)) {
+        let message = "";
+
+        if (number > 0) {
+          message = `${number} is a Positive number.`;
+        } else if (number < 0) {
+          message = `${number} is a Negative number.`;
+        } else {
+          message = `The number is Zero.`;
+        }
+
+        document.body.innerHTML = `<h2>${message}</h2>`;
+      } else {
+        document.body.innerHTML = `<h2>Invalid input. Please reload and enter a valid number.</h2>`;
+      }
+    };
+  </script>
+</head>
+<body>
+</body>
+</html>

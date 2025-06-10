@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Exercises</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            padding: 20px;
+        }
+        .task {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #006400;
+        }
+        input, button {
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+        .output {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="task">
+    <h2>Exercise 1: Reverse a Number</h2>
+    <input type="number" id="numberInput" placeholder="Enter a number" />
+    <button onclick="handleReverseNumber()">Reverse</button>
+    <div class="output" id="reverseOutput"></div>
+</div>
+
+<div class="task">
+    <h2>Exercise 2: Alphabetical Order</h2>
+    <input type="text" id="stringInput" placeholder="Enter a string" />
+    <button onclick="handleAlphabetOrder()">Sort Alphabetically</button>
+    <div class="output" id="alphabetOutput"></div>
+</div>
+
+<script>
+    function reverseNumber(num) {
+        return parseInt(num.toString().split('').reverse().join(''));
+    }
+
+    function handleReverseNumber() {
+        const input = document.getElementById("numberInput").value;
+        const result = reverseNumber(input);
+        document.getElementById("reverseOutput").textContent = "Reversed Number: " + result;
+    }
+
+    function alphabetOrder(str) {
+        return str.split('').sort().join('');
+    }
+
+    function handleAlphabetOrder() {
+        const input = document.getElementById("stringInput").value;
+        const result = alphabetOrder(input);
+        document.getElementById("alphabetOutput").textContent = "Alphabetically Sorted: " + result;
+    }
+</script>
+
+</body>
+</html>
