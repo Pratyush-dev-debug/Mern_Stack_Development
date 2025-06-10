@@ -1,0 +1,74 @@
+/* Full-screen background and center content */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('sun.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px 30px;
+    width: 350px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.login-box input[type="email"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.login-box input::placeholder {
+    color: #888;
+}
+
+.checkbox {
+    text-align: left;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.checkbox label {
+    color: #fff;
+}
+
+.checkbox a {
+    color: #99ccff;
+    text-decoration: none;
+}
+
+.login-box button {
+    background-color: #f5a623;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background-color: #d88f00;
+}

@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('sun.jpg'); /* Add your background image */
+    background-size: cover;
+    color: white;
+}
+
+.container {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+header {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    font-size: 40px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 8px 15px;
+    background-color: #aaa;
+    border-radius: 12px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.album-section {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px dashed white;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.album-section h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.album-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: start;
+}
+
+.album-row img {
+    width: 120px;
+    height: 170px;
+    object-fit: cover;
+    border: 2px solid white;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.album-row img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
