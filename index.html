@@ -2,67 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Task Dashboard</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #eaeaea;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #e0f7fa, #e1bee7);
+            padding: 40px 20px;
         }
 
         h1 {
-            margin: 0;
-            font-size: 2em;
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 2.5em;
         }
 
         .task-links {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
-            padding: 40px 20px;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: auto;
         }
 
         .task-links a {
             display: block;
+            padding: 16px 20px;
             text-align: center;
-            padding: 15px 20px;
-            background-color: #4CAF50;
-            color: white;
             text-decoration: none;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-weight: 600;
+            font-size: 1.05rem;
+            border-radius: 14px;
+            background: linear-gradient(145deg, #81c784, #66bb6a);
+            color: white;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
             transition: all 0.3s ease;
-            font-weight: bold;
         }
 
         .task-links a:hover {
-            background-color: #388e3c;
-            transform: scale(1.05);
+            background: linear-gradient(145deg, #66bb6a, #388e3c);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
         }
 
-        @media (max-width: 500px) {
-            .task-links {
-                grid-template-columns: 1fr;
+        @media screen and (max-width: 500px) {
+            h1 {
+                font-size: 2em;
             }
         }
     </style>
 </head>
 <body>
-<header>
-    <h1>My Task Dashboard</h1>
-</header>
+
+<h1>My Task Dashboard</h1>
 
 <div class="task-links">
     <a href="task1.html">Task 1: Table Task</a>
@@ -98,6 +97,11 @@
     <a href="task31.html">Task 31: Multiplication & Division</a>
     <a href="task32.html">Task 32: Form Validation</a>
     <a href="task33.html">Task 33: Password Generator</a>
+    <a href="task34.html" class="task">Task 34: Weather Forecast App</a>
+    <a href="task35.html" class="task">Task 35: Save and Load with localStorage</a>
+    <a href="task36.html" class="task" >Task 36: Timer</a>
+    <a href="task37.html" class="task" target="_blank">Task 37: TO-DO LIST</a>
 </div>
+
 </body>
 </html>
